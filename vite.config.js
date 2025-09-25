@@ -6,5 +6,5 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  base: '/info-vis-jgal8248/',
+  base: '/info_vis_envirometrics/',
 })
