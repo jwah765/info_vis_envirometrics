@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  font-family: SF Pro, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  display: flexbox;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  /* max-width: 1280px; */
+  max-width: fit-content;
+  margin: 1rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+/* metric toggles */
+
+.metric-btn {
+    padding: 0.2em 0.8em;
+    margin: 0.2em;
+    font-weight: 500;
+    transition: border-color 0.25s;
+    border: 1px solid oklch(55.4% 0.046 257.417);
+    border-radius: 100px;
+    background: #ffffff;
+    color: oklch(55.4% 0.046 257.417);
+    font-size: 0.9em;
+}
+
+.metric-btn:hover {
+    background: oklch(55.4% 0.046 257.417);
+    color: white;
+    /* box-shadow: 0px 0px 3px 0px rgb(138, 138, 138); */
+}
+
+.metric-btn.active {
+    background: oklch(42.4% 0.199 265.638);
+    border: 1px solid oklch(42.4% 0.199 265.638);
+    /* border: 1px solid #1a4a8e; */
+    color: white;
+}
+
+/* the demo container */
+
+
+/* general chart styling */
+rect {
+  transition: stroke-width 0.2s ease;
+  cursor: pointer;
+}
+
+.loading {
+  position: relative;
+  text-align: center;
+  /* background: rgba(255, 255, 255, 0.9); */
+  padding: 2rem;
+  /* border-radius: 10px; */
+}
+
+.loading p {
+  margin-top: 1rem;
+  font-size: 1.1em;
+  color: #666;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
